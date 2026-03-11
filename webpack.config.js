@@ -13,17 +13,15 @@ module.exports = (env) => {
     entry: {
       popup: {
         import: path.join(srcDir, 'popup/index.tsx'),
-        layer: "extention"
+        layer: 'extention',
       },
-      background: 
-      {
+      background: {
         import: path.join(srcDir, 'background/index.ts'),
-        layer: "background"
+        layer: 'background',
       },
-      inject: 
-      {
+      inject: {
         import: path.join(srcDir, 'inject/index.ts'),
-        layer: "inject"
+        layer: 'inject',
       },
     },
     output: {
@@ -40,24 +38,25 @@ module.exports = (env) => {
         },
         {
           test: /\.css$/,
-          issuerLayer: "extention",
+          issuerLayer: 'extention',
           use: [
             MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
-              // options: {
-              //   esModule: true,
-              //   modules: {
-              //     namedExport: true,
-              //   },
-              // },
+              options: {
+                esModule: true,
+                modules: {
+                  localIdentName: '[local]--[hash:base64:5]',
+                  namedExport: true,
+                },
+              },
             },
             'postcss-loader',
           ],
         },
         {
           test: /\.css$/,
-          issuerLayer: "inject",
+          issuerLayer: 'inject',
           use: [
             'style-loader',
             {

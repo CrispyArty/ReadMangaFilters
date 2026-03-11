@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import { configs } from 'typescript-eslint';
+import importPlugin from 'eslint-plugin-import';
 import pluginReact from 'eslint-plugin-react';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 // Import json from "@eslint/json";
@@ -20,19 +21,48 @@ export default defineConfig([
       },
     },
   },
-  tseslint.configs.recommended,
+  configs.recommended,
   pluginReact.configs.flat.recommended,
+  importPlugin.flatConfigs.recommended,
   eslintPluginPrettierRecommended,
   {
     rules: {
       'no-console': ['warn'],
-      '@typescript-eslint/no-unused-expressions': ['error', { allowTernary: true }],
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        { allowTernary: true, allowShortCircuit: true },
+      ],
+      'import/order': [
+        'warn',
+        {
+          groups: ['external', 'builtin', 'parent', 'sibling', 'internal', 'index', 'object'],
+          pathGroups: [
+            {
+              pattern: './*.module.css',
+              group: 'object',
+            },
+            {
+              pattern: '@**',
+              group: 'parent',
+              position: 'before',
+            },
+            {
+              pattern: '@**/**',
+              group: 'parent',
+              position: 'before',
+            },
+          ],
+        },
+      ],
     },
-    // settings: {
-    //   react: {
-    //     version: '18',
-    //   },
-    // },
+    settings: {
+      react: {
+        version: '18',
+      },
+      'import/resolver': {
+        typescript: {},
+      },
+    },
   },
 
   // { files: ["**/*.json"], plugins: { json }, language: "json/json", extends: ["json/recommended"] },

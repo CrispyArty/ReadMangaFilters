@@ -1,0 +1,30 @@
+@import './vars.css';
+
+body {
+  margin: 8px;
+  padding: 0;
+  width: 320px;
+  color: var(--darkPrimary);
+  font-size: 16px;
+  font-family: var(--fontDefault);
+  line-height: var(--lh16);
+  letter-spacing: var(--ls16);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
