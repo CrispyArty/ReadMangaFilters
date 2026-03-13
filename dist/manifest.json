@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "js": ["js/inject.js"],
-      "matches": ["https://*.zazaza.me/*", "https://zazaza.me/*"]
+      "matches": ["https://*.zazaza.me/list/*", "https://zazaza.me/list/*"]
     }
   ],
   "background": {
@@ -24,8 +24,8 @@
   },
   "permissions": ["scripting", "webRequest", "storage"],
   "host_permissions": [
-    "https://*.zazaza.me/*",
-    "https://zazaza.me/*",
+    "https://*.zazaza.me/list/*",
+    "https://zazaza.me/list/*",
     "https://api.rmr.rocks/api/bookmark/getAllList"
   ]
 }
