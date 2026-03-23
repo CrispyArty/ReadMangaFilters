@@ -3250,6 +3250,13 @@ postcss-dir-pseudo-class@^10.0.0:
   dependencies:
     postcss-selector-parser "^7.1.1"
 
+postcss-discard-comments@^7.0.6:
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-7.0.6.tgz#4e9c696a83391d90b3ffa4485ac144e555db443c"
+  integrity sha512-Sq+Fzj1Eg5/CPf1ERb0wS1Im5cvE2gDXCE+si4HCn1sf+jpQZxDI4DXEp8t77B/ImzDceWE2ebJQFXdqZ6GRJw==
+  dependencies:
+    postcss-selector-parser "^7.1.1"
+
 postcss-double-position-gradients@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/postcss-double-position-gradients/-/postcss-double-position-gradients-7.0.0.tgz#ea68a2698ac7e4ed3a3ab517b04eb48476cb1ba8"

@@ -15,5 +15,6 @@ module.exports = {
       },
       // importFrom: ['./src/styles/vars.css', './src/styles/media.css'],
     },
+    'postcss-discard-comments': require('postcss-discard-comments')(),
   },
 };
