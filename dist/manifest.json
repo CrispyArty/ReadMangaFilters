@@ -17,10 +17,10 @@
     {
       "js": ["js/inject.js"],
       "matches": [
-        "https://*.zazaza.me/list/*",
-        "https://zazaza.me/list/*",
-        "https://*.seimanga.me/list/*",
-        "https://seimanga.me/list/*"
+        "https://*.zazaza.me/list*",
+        "https://zazaza.me/list*",
+        "https://*.seimanga.me/list*",
+        "https://seimanga.me/list*"
       ]
     }
   ],
@@ -29,10 +29,10 @@
   },
   "permissions": ["scripting", "webRequest", "storage"],
   "host_permissions": [
-    "https://*.seimanga.me/list/*",
-    "https://seimanga.me/list/*",
-    "https://*.zazaza.me/list/*",
-    "https://zazaza.me/list/*",
+    "https://*.seimanga.me/list*",
+    "https://seimanga.me/list*",
+    "https://*.zazaza.me/list*",
+    "https://zazaza.me/list*",
     "https://api.rmr.rocks/api/bookmark/getAllList"
   ]
 }
