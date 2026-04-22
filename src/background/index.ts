@@ -10,5 +10,10 @@ chrome.webRequest.onCompleted.addListener(
         .catch(() => {});
     }
   },
-  { urls: ['https://api.rmr.rocks/api/bookmark/getAllList'] },
+  {
+    urls: [
+      'https://api.rmr.rocks/api/bookmark/getAllList',
+      'https://api.one-way.work/api/bookmark/getAllList',
+    ],
+  },
 );

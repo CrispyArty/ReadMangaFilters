@@ -3,6 +3,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const srcDir = path.join(__dirname, 'src');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // const explain = process.argv.includes("--explain");
 
@@ -74,6 +75,17 @@ module.exports = (env) => {
           return chunk.name == 'popup';
         },
       },
+
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            format: {
+              comments: false,
+            },
+          },
+          extractComments: false,
+        }),
+      ],
     },
     resolve: {
       extensions: ['.ts', '.tsx', '.js'],

@@ -33,6 +33,7 @@
     "https://seimanga.me/list*",
     "https://*.zazaza.me/list*",
     "https://zazaza.me/list*",
-    "https://api.rmr.rocks/api/bookmark/getAllList"
+    "https://api.rmr.rocks/api/bookmark/getAllList",
+    "https://api.one-way.work/api/bookmark/getAllList"
   ]
 }
