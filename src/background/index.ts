@@ -14,6 +14,8 @@ chrome.webRequest.onCompleted.addListener(
     urls: [
       'https://api.rmr.rocks/api/bookmark/getAllList',
       'https://api.one-way.work/api/bookmark/getAllList',
+      'https://gr.input.monster/api/bookmark/getAllList',
+      'https://3.grouple.co/api/bookmark/getAllList',
     ],
   },
 );
